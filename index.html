@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dova | 퍼블리셔 프로필</title>
+  <meta name="description" content="퍼블리셔 Dova의 프로필과 포트폴리오">
+
+  <!-- 디스플레이 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <!-- 보조 스타일 -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-800 antialiased" id="top">
+
+  <!-- 헤더 -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur transition">
+    <div class="header-bar border-b border-gray-200">
+      <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+        <a href="#top" class="flex items-center gap-2 text-3xl font-extrabold tracking-tight text-gray-900">
+          <span class="h-2.5 w-2.5 rounded-full bg-green-500"></span>
+          Dova
+        </a>
+
+        <ul class="hidden items-center gap-8 text-sm font-medium text-gray-600 md:flex">
+          <li><a href="#about" class="transition hover:text-green-600">소개</a></li>
+          <li><a href="#skills" class="transition hover:text-green-600">기술 스택</a></li>
+          <li><a href="#portfolio" class="transition hover:text-green-600">포트폴리오</a></li>
+          <li><a href="#contact" class="transition hover:text-green-600">연락처</a></li>
+        </ul>
+
+        <a href="#contact" class="hidden rounded-full bg-green-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-green-700 md:inline-block">연락하기</a>
+
+        <button id="menu-btn" type="button" class="rounded-full p-2 transition hover:bg-gray-100 md:hidden" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <div id="mobile-menu" class="hidden border-b border-gray-200 bg-white px-4 pb-2 md:hidden">
+      <ul class="flex flex-col text-sm font-medium text-gray-700">
+        <li><a href="#about" class="block rounded-xl px-4 py-3 hover:bg-green-50 hover:text-green-600">소개</a></li>
+        <li><a href="#skills" class="block rounded-xl px-4 py-3 hover:bg-green-50 hover:text-green-600">기술 스택</a></li>
+        <li><a href="#portfolio" class="block rounded-xl px-4 py-3 hover:bg-green-50 hover:text-green-600">포트폴리오</a></li>
+        <li><a href="#contact" class="block rounded-xl px-4 py-3 hover:bg-green-50 hover:text-green-600">연락처</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 오른쪽 고정 연락처 패널 (데스크톱) -->
+  <aside class="fixed right-6 top-1/2 z-40 hidden w-56 -translate-y-1/2 flex-col gap-3 lg:flex">
+    <div class="rounded-2xl border border-gray-200 bg-white/90 p-5 shadow-xl backdrop-blur">
+      <p class="text-xs font-semibold tracking-widest text-green-600">CONTACT</p>
+      <p class="mt-2 text-sm text-gray-500">작업 문의는 언제든 환영합니다.</p>
+      <a href="tel:01030672067" class="mt-3 block text-lg font-bold text-gray-900 transition hover:text-green-600">010-3067-2067</a>
+      <a href="#contact" class="mt-4 block rounded-full bg-green-600 px-4 py-2.5 text-center text-sm font-medium text-white transition hover:bg-green-700">연락하기</a>
+    </div>
+  </aside>
+
+  <!-- 모바일 하단 고정 전화 버튼 -->
+  <a href="tel:01030672067" class="fixed inset-x-4 bottom-4 z-40 rounded-full bg-green-600 py-4 text-center font-bold text-white shadow-xl transition hover:bg-green-700 lg:hidden">
+    010-3067-2067 전화하기
+  </a>
+
+  <main>
+    <!-- Hero / 소개 -->
+    <section id="about" class="relative overflow-hidden bg-white px-4 pb-16 pt-36 sm:px-6">
+      <div class="fade-in mx-auto max-w-6xl">
+        <!-- 큰 타이틀: 외곽선 + 채움 -->
+        <h1 class="font-display select-none text-center text-[clamp(4.5rem,17vw,14rem)] font-black leading-none tracking-tight">
+          <span class="outline-text">DO</span><span class="text-green-600">VA</span>
+        </h1>
+
+        <!-- 프로필 사진: 타이틀과 겹치도록 배치 -->
+        <div class="relative z-10 -mt-[0.35em] flex justify-center">
+          <img id="profile-img"
+               src="https://avatars.githubusercontent.com/u/56466589?s=400&u=3285baae316bb36502e94409265178d84c53c782&v=4"
+               alt="Dova 프로필 사진"
+               class="h-72 w-72 rounded-full object-cover shadow-2xl ring-8 ring-white sm:h-96 sm:w-96">
+          <div id="profile-fallback" class="hidden h-72 w-72 items-center justify-center rounded-full bg-green-600 font-display text-8xl font-black text-white shadow-2xl ring-8 ring-white sm:h-96 sm:w-96">D</div>
+        </div>
+
+        <!-- 하단 정보 -->
+        <div class="relative z-10 -mt-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-gray-700 shadow-sm">
+              <span class="h-2 w-2 rounded-full bg-green-500"></span>
+              프로젝트 문의 가능
+            </p>
+            <h2 class="mt-5 text-3xl font-bold text-gray-900 sm:text-4xl">Publisher</h2>
+            <p class="mt-3 max-w-sm text-gray-600">퍼블리셔 Dova 입니다.</p>
+          </div>
+
+          <div class="flex gap-3">
+            <a href="#portfolio" class="rounded-full bg-green-600 px-6 py-3 font-medium text-white shadow-sm transition hover:bg-green-700">포트폴리오 보기</a>
+            <a href="#contact" class="rounded-full border border-gray-300 bg-white px-6 py-3 font-medium transition hover:border-green-600 hover:text-green-600">연락하기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 기술 스택 -->
+    <section id="skills" class="bg-gray-50 px-4 py-20 sm:px-6">
+      <div class="fade-in mx-auto max-w-6xl">
+        <h2 class="text-center text-3xl font-bold text-gray-900">기술 스택</h2>
+        <p class="mt-3 text-center text-gray-500">마크업부터 인터랙션까지 웹 화면을 만듭니다.</p>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-3">
+          <article class="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+            <p class="font-mono text-sm font-semibold text-green-600">01</p>
+            <h3 class="mt-2 text-xl font-bold text-gray-900">HTML</h3>
+            <p class="mt-2 text-sm leading-relaxed text-gray-500">의미 있는 구조와 시맨틱 마크업으로 접근성과 SEO를 고려합니다.</p>
+          </article>
+          <article class="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+            <p class="font-mono text-sm font-semibold text-green-600">02</p>
+            <h3 class="mt-2 text-xl font-bold text-gray-900">CSS</h3>
+            <p class="mt-2 text-sm leading-relaxed text-gray-500">어떤 기기에서도 자연스럽게 보이는 반응형 레이아웃을 구현합니다.</p>
+          </article>
+          <article class="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+            <p class="font-mono text-sm font-semibold text-green-600">03</p>
+            <h3 class="mt-2 text-xl font-bold text-gray-900">JavaScript</h3>
+            <p class="mt-2 text-sm leading-relaxed text-gray-500">사용자 동작에 반응하는 가벼운 인터랙션을 더합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 포트폴리오 -->
+    <section id="portfolio" class="px-4 py-20 sm:px-6">
+      <div class="fade-in mx-auto max-w-6xl">
+        <h2 class="text-center text-3xl font-bold text-gray-900">포트폴리오</h2>
+        <p class="mt-3 text-center text-gray-500">진행한 프로젝트를 소개합니다.</p>
+
+        <div id="project-list" class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <!-- 연락처 -->
+    <section id="contact" class="bg-green-600 px-4 py-32 pb-40 text-white sm:px-6 lg:pb-32">
+      <div class="fade-in mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold">연락처</h2>
+        <p class="mt-3 text-green-100">작업 문의나 협업 제안은 언제든 환영합니다.</p>
+
+        <a href="tel:01030672067" class="mt-8 inline-block rounded-full bg-white px-8 py-4 text-lg font-bold text-green-700 shadow-md transition hover:bg-green-50">
+          010-3067-2067
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="border-t border-gray-100 px-4 py-8 pb-24 text-center text-sm text-gray-500 sm:px-6 lg:pb-8">
+    <p>&copy; <span id="year"></span> Dova. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
